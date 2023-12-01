@@ -1,0 +1,8 @@
+let num = []
+for(let i = 10 ; i <= 100 ; i += 10){
+if(i !== 40 ){
+    num.push(i)
+}
+}
+
+console.log(num)
