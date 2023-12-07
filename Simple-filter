@@ -6,3 +6,16 @@ if(i !== 40 ){
 }
 
 console.log(num)
+
+firstly we should  to make a new array from another array by for loop 
+
+1- we make a new array epmty 
+
+2- make an if statement in expression use the main array we take element from it 
+
+3- in breake line we do what we want = > we type the new array and push the i ( the element we want ) push it in new array 
+
+4- dont miss the continue tage to escape the indexes empty in main array 
+
+
+wo the our function build by new array - for loop in main array - if statement to filter main array - array.push(i) - continue tag to escape the element we dont want it 
