@@ -1,0 +1,33 @@
+
+function arrowDuplicates(word) {
+    // write your code here 
+    let split = word.split("") // make string to array 
+    let duplicates = []; // array of duplicates letters
+
+    // fill duplicates array 
+    for (let i = 0; i < split.length; i++) {
+        for (let j = i + 1; j < split.length; j++) {
+            if (split[i].toLowerCase() === split[j].toLowerCase() && !duplicates.includes(split[i])) {
+                duplicates.push(split[i]);
+            }
+        }
+    }
+
+    if(duplicates.length == 0) {
+        return split.map(el => el = ">").join("")
+    }
+    
+let result = [] // fill this array with "<" or ">" 
+    for(let i = 0; i < split.length; i++) {
+
+        for(let j = 0; j < duplicates.length; j++) {
+            if(split[i].includes(duplicates[j].toLowerCase()) || split[i].includes(duplicates[j].toUpperCase())) {
+                split[i] = "<"
+            }else split[i] = ">"
+            result.push(split[i])
+        }
+        
+    }
+    
+    return  result.join("")
+}
